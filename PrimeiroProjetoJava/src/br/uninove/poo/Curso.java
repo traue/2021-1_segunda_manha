@@ -1,13 +1,19 @@
 
 package br.uninove.poo;
 
+import java.util.List;
+
 public class Curso {
     private String nomeCurso;
-    private int cargaHoraria;
+    private List<Disciplina> disciplinas;
 
-    public Curso(String nomeCurso, int cargaHoraria) {
+    public Curso(String nomeCurso) {
         this.nomeCurso = nomeCurso;
-        this.cargaHoraria = cargaHoraria;
+    }
+
+    public Curso(String nomeCurso, List<Disciplina> disciplinas) {
+        this.nomeCurso = nomeCurso;
+        this.disciplinas = disciplinas;
     }
     
     public Curso() {}
@@ -21,10 +27,26 @@ public class Curso {
     }
 
     public int getCargaHoraria() {
+        int cargaHoraria = 0;
+        for(Disciplina disc : disciplinas) {
+            cargaHoraria += disc.getCargaHoraria();
+        }
         return cargaHoraria;
     }
 
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
+    //O set CH do curso deixa de existir poir agora a CH 
+    //é calculada pela CH do conjunto de disciplinas
+//    public void setCargaHoraria(int cargaHoraria) {
+//        this.cargaHoraria = cargaHoraria;
+//    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
     }
+
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+    
+    
 }
