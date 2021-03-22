@@ -22,6 +22,5 @@
         <strong>Fuma: </strong><%= (p.isFumante() ? "Sim" : "Não")%><br>
         <hr>
         <a href="index.jsp">Mesma página, mas SEM Orientação à Objetos</a>
-
     </body>
 </html>
