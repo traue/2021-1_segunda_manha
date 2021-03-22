@@ -1,9 +1,6 @@
 package br.uninove.poo;
 
-//import java.util.Scanner;
-
 import java.util.ArrayList;
-
 
 public class Principal {
 
@@ -11,6 +8,7 @@ public class Principal {
         ArrayList<Disciplina> discs = new ArrayList();
         Disciplina d1 = new Disciplina();
         Disciplina d2 = new Disciplina();
+        Disciplina d3 = new Disciplina();
         
         d1.setNome("Aplicações Orientadas a Objetos");
         d1.setCargaHoraria(50);
@@ -23,14 +21,20 @@ public class Principal {
         d2.setEmenta("Essa disciplina tem como objetivo apresentar o"
                 + " mundo dos dados para os discentes...");
         
-        Curso c = new Curso("Ciência da Computação");
+        d3.setNome("Primeiros Socorros");
+        d3.setCargaHoraria(20);
+        d3.setEmenta("Disciplina que ensina técnicas de primeiros socorros...");
         
+        Curso c = new Curso("Ciência da Computação");
         
         discs.add(d1);
         discs.add(d2);
+        discs.add(d3);
         
         c.setDisciplinas(discs);
         
-        System.out.println("CH do curso: " + c.getCargaHoraria());
+        //System.out.println("CH do curso: " + c.getCargaHoraria());
+        
+        System.out.println(c.toString());
     }
 }

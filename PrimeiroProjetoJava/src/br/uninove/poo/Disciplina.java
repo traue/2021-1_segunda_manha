@@ -39,6 +39,4 @@ public class Disciplina {
     public void setEmenta(String ementa) {
         this.ementa = ementa;
     }
-    
-    
 }

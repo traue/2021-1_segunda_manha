@@ -36,9 +36,9 @@ public class Curso {
 
     //O set CH do curso deixa de existir poir agora a CH 
     //é calculada pela CH do conjunto de disciplinas
-//    public void setCargaHoraria(int cargaHoraria) {
-//        this.cargaHoraria = cargaHoraria;
-//    }
+    //    public void setCargaHoraria(int cargaHoraria) {
+    //        this.cargaHoraria = cargaHoraria;
+    //    }
 
     public List<Disciplina> getDisciplinas() {
         return disciplinas;
@@ -48,5 +48,18 @@ public class Curso {
         this.disciplinas = disciplinas;
     }
     
-    
+    @Override
+    public String toString() {
+        String cursoToString = "Curso: " + nomeCurso
+                + "\nCarga Horária: " + getCargaHoraria() 
+                + "\nDisciplinas:\n";
+        for(Disciplina disc : disciplinas) {
+            cursoToString += "\t - " + disc.getNome() + "(" + disc.getCargaHoraria() + "hs)\n";
+        }
+        
+        
+        
+        return cursoToString;
+               
+    }
 }
