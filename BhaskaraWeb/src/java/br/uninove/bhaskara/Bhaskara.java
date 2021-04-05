@@ -14,4 +14,5 @@ public class Bhaskara {
     o delta não pode ser negativo para calcular as raizes
     raizPositiva = (-b + raiz(delta)) / 2 * a
     raizNegativa = (-b - raiz(delta)) / 2 * a
+    Calcualr raiz em Java: Math.sqrt()
 */
