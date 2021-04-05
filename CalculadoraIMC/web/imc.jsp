@@ -25,5 +25,7 @@
         <h2>Seu IMC: </h2>
         <p><strong>IMC: </strong><%= String.format("%.02f", imc.calculaIMC()) %></p>
         <p><strong>Classificação: </strong><%= imc.getClassificacao()%></p>
+        <br>
+        <a href="index.html">Calcular Novamente</a>
     </body>
 </html>
