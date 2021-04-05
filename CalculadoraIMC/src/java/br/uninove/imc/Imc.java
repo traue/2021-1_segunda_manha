@@ -46,6 +46,7 @@ public class Imc {
     }
     
     public void geraClassificacao() {
+        //retirado de: https://portalcontexto.com/wp-content/uploads/2019/08/IMC-tabela.png
         if(imc <= 18.5) {
             classificacao = "Abaixo do peso";
         } else if(imc >= 18.6 && imc <= 24.9) {
@@ -59,7 +60,5 @@ public class Imc {
         } else if(imc >= 40) {
             classificacao = "Obesidade grau III";
         }
-        
-        //retirado de: https://portalcontexto.com/wp-content/uploads/2019/08/IMC-tabela.png
     }
 }
