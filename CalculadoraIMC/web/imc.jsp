@@ -27,5 +27,8 @@
         <p><strong>Classificação: </strong><%= imc.getClassificacao()%></p>
         <br>
         <a href="index.html">Calcular Novamente</a>
+        <br>
+        <br>
+        <a href="https://github.com/traue/2021-1_segunda_manha/tree/main/CalculadoraIMC">Projeto no Git</a>
     </body>
 </html>
