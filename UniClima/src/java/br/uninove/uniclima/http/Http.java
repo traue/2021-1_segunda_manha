@@ -19,7 +19,7 @@ public class Http {
         try {
             String url = "http://api.openweathermap.org/data/2.5/weather";
             String charset = StandardCharsets.UTF_8.name();
-            String appid = "5866d7e0236711d910af8d23e4fadf8f"; //COLOCAR O SEU API KEY
+            String appid = ""; //COLOCAR O SEU API KEY
             String units = "metric";
             String lang = "pt_br";
             
