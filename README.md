@@ -7,10 +7,10 @@
 
  - [Atividade 1](https://forms.gle/mjqqat87A44EX19M9) - De 05.04 até 12.04
  - [Atividade 2](https://forms.gle/uqnYf67rfyqNdjrw5) - De 26.04 até 10.05
- - Atividade 3
- - Atividade 4
- - Atividade 5
- - Atividade 6
+
+
+Novas atividades serão postadas aqui em breve. Fique de olho 😉
+
 
 ***
 
