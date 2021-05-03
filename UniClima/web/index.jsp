@@ -30,6 +30,7 @@
                 margin: 0 auto !important;
             }
         </style>
+        <link rel="icon" href="imgs/favicon.png">
     </head>
     <body>
         <!-- Barra de navegação -->
@@ -55,9 +56,9 @@
                             </div>
                             <div>
                                 <p><strong>Agora: </strong><%= StrUtils.convertToTitleCaseIteratingChars(clima.getWeather().get(0).getDescription()) %></p>
-                                <p><strong>Temperatura </strong><%=clima.getMain().getTemp()%> ºC</p>
-                                <p><strong>Max: </strong><%=clima.getMain().getTempMax()%> ºC</p>
-                                <p><strong>Min: </strong><%=clima.getMain().getTempMin()%> ºC</p>
+                                <p><strong>Temperatura </strong><%= StrUtils.dotToComma(clima.getMain().getTemp())%> ºC</p>
+                                <p><strong>Max: </strong><%=StrUtils.dotToComma(clima.getMain().getTempMax())%> ºC</p>
+                                <p><strong>Min: </strong><%=StrUtils.dotToComma(clima.getMain().getTempMin())%> ºC</p>
                                 <p><strong>Umidade: </strong><%=clima.getMain().getHumidity() %>%</p>
                                 <p><strong>Sensação térmica: </strong><%=clima.getMain().getFeelsLike() %> ºC</p>
                             </div>

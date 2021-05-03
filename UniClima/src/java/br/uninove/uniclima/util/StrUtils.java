@@ -24,4 +24,8 @@ public class StrUtils {
 
         return converted.toString();
     }
+    
+    public static String dotToComma(double value) {
+        return String.format("%.2f", value);
+    }
 }

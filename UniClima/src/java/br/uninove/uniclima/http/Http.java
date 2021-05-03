@@ -29,7 +29,7 @@ public class Http {
         try {
             String charset = StandardCharsets.UTF_8.name();
             String url = "http://api.openweathermap.org/data/2.5/weather";
-            String appid = "XXXXXX"; //COLOCAR O SEU API KEY
+            String appid = "XXXX"; //COLOCAR A SUA API KEY
             String units = "metric";
             String lang = "pt_br";
 
