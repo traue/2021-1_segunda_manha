@@ -5,8 +5,9 @@
 
 ### Link das atividades
 
- - [Atividade 1](https://forms.gle/mjqqat87A44EX19M9) - De 05.04 até 12.04
- - [Atividade 2](https://forms.gle/uqnYf67rfyqNdjrw5) - De 26.04 até 10.05
+ - [Atividade 1](https://forms.gle/mjqqat87A44EX19M9) - De 05.04 até 12.04, 9h (encerrada)
+ - [Atividade 2](https://forms.gle/uqnYf67rfyqNdjrw5) - De 26.04 até 10.05, 9h (encerrada)
+ - [Atividade 3](https://forms.gle/dWRyvJQoW6qQdUfGA) - De 10.05 até 24.05, 9h
 
 
 Novas atividades serão postadas aqui em breve. Fique de olho 😉
