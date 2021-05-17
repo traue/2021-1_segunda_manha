@@ -13,6 +13,8 @@
             }
             
             session.setAttribute("nomeUsuario", nome);
+            session.setAttribute("autenticado", true);
+            
         %>
         <h2>Trabalhando com Sessões...</h2>
         <hr>
