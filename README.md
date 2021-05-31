@@ -13,7 +13,7 @@
  - [Atividade 6](https://forms.gle/oeBWnxoDMAKYTMKj8) - De 31.05 até 07.06, 9h
 
 
-Novas atividades serão postadas aqui em breve. Fique de olho 😉
+Estas são todas as atividades da disciplina. Não serão realizadas novas atividades. Não deixe de realizá-las. ❤️
 
 
 ***
