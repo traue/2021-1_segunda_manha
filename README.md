@@ -10,6 +10,7 @@
  - [Atividade 3](https://forms.gle/dWRyvJQoW6qQdUfGA) - De 10.05 até 07.06, 9h
  - [Atividade 4](https://forms.gle/N68kFSPW4tsSQNWVA) - De 17.05 até 07.06, 9h
  - [Atividade 5](https://forms.gle/iF4FvfpAjT46Qckm6) - De 24.05 até 07.06, 9h
+ - [Atividade 6](https://forms.gle/oeBWnxoDMAKYTMKj8) - De 31.05 até 07.06, 9h
 
 
 Novas atividades serão postadas aqui em breve. Fique de olho 😉
