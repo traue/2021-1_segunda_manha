@@ -6,15 +6,14 @@
 ### Link das atividades
 
  - [Atividade 1](https://forms.gle/mjqqat87A44EX19M9) - De 05.04 até 12.04, 9h (encerrada)
- - [Atividade 2](https://forms.gle/uqnYf67rfyqNdjrw5) - De 26.04 até 07.06, 9h
- - [Atividade 3](https://forms.gle/dWRyvJQoW6qQdUfGA) - De 10.05 até 07.06, 9h
- - [Atividade 4](https://forms.gle/N68kFSPW4tsSQNWVA) - De 17.05 até 07.06, 9h
- - [Atividade 5](https://forms.gle/iF4FvfpAjT46Qckm6) - De 24.05 até 07.06, 9h
- - [Atividade 6](https://forms.gle/oeBWnxoDMAKYTMKj8) - De 31.05 até 07.06, 9h
+ - [Atividade 2](https://forms.gle/uqnYf67rfyqNdjrw5) - De 26.04 até 07.06, 9h (encerrada)
+ - [Atividade 3](https://forms.gle/dWRyvJQoW6qQdUfGA) - De 10.05 até 07.06, 9h (encerrada)
+ - [Atividade 4](https://forms.gle/N68kFSPW4tsSQNWVA) - De 17.05 até 07.06, 9h (encerrada)
+ - [Atividade 5](https://forms.gle/iF4FvfpAjT46Qckm6) - De 24.05 até 07.06, 9h (encerrada)
+ - [Atividade 6](https://forms.gle/oeBWnxoDMAKYTMKj8) - De 31.05 até 07.06, 9h (encerrada)
 
 
-Estas são todas as atividades da disciplina. Não serão realizadas novas atividades. Não deixe de realizá-las. ❤️
-
+Todas as atividades já estão devidamente encerradas e o fechamento das notas ocorreu na aula do dia 07.06. ❤️
 
 ***
 
