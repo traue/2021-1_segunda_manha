@@ -22,6 +22,7 @@
     </head>
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
+        <script src="../js/modalExclusao.js"></script>
         <% if(mostraPainelFiltro) { %>
             <div class="container mt-4">
                 <div class="card" style="width: 90%; margin: 0 auto !important;">
@@ -59,7 +60,7 @@
                         <td><%=a.getCurso().getNomeCurso()%></td>
                         <td><%=a.getCurso().getTipoCurso()%></td>
                         <td>BT EDITAR</td>
-                        <td>BT EXCLUIR</td>
+                        <td><a href="#" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
                     </tr>
                     <% }%>
                 </tbody>
