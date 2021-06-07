@@ -9,6 +9,6 @@ As notas disponíveis neste caixa são: 100, 50, 20, 10, 5 e 2.
 
 <br>
 
-Como entegar?
+Como entregar?
 
 Por e-mail ao professor da disciplina, até dia 09.06, 11h. Identificar-se no e-mail (Nome completo, RA e turma 17)
