@@ -23,7 +23,7 @@
                                 Cadastros
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Alunos</a></li>
+                                <li><a class="dropdown-item" href="<%=request.getContextPath()%>/cadastro/aluno.jsp">Alunos</a></li>
                                 <li><a class="dropdown-item" href="<%=request.getContextPath()%>/cadastro/curso.jsp">Cursos</a></li>
                             </ul>
                         </li>

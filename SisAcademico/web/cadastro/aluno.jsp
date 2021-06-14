@@ -1,0 +1,44 @@
+<%@page import="br.sisacademico.model.Curso"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="br.sisacademico.dao.CursoDAO"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    CursoDAO cDAO = new CursoDAO();
+    ArrayList<Curso> cursos = cDAO.getCursos();
+    String acao = "cadastro";
+%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SisAcadêmico</title>
+    </head>
+    <body>
+        <jsp:include page="../menu.jsp"></jsp:include>
+            <div class="container mt-4">
+                <div style="width: 40%; margin: 0 auto !important;">
+                    <form method="post" action="../AlunoController">
+                        <div class="form-group">
+                            <label>RA</label>
+                            <input type="number" class="form-control" required name="raAluno" placeholder="Insira o RA">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Nome do aluno</label>
+                            <input type="text" class="form-control" required name="nomeAluno" placeholder="Insira o nome do aluno">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Curso</label>
+                            <select class="form-control" name="idcurso">
+                            <% for (Curso c : cursos) {%>
+                            <option value="<%=c.getIdCurso()%>"><%=c.getNomeCurso() + " (" + c.getTipoCurso() + ")"%></option>
+                            <% }%>
+                        </select>
+                    </div>
+                    <div class="mt-3">
+                        <input type="submit" class="btn btn-primary btn-md w-100" value="Cadastrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
