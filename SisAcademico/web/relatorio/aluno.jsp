@@ -5,13 +5,17 @@
 <%
     AlunoDAO aDAO = new AlunoDAO();
     ArrayList<Aluno> alunos;
+    String returnPg;
     boolean mostraPainelFiltro = false;
-    if(request.getParameter("idCurso") == null)
+    if(request.getParameter("idCurso") == null) {
       alunos = aDAO.gettodosAlunos();
+      returnPg = "&returnFilter=false";
+    }
     else {
         int idCurso = Integer.parseInt(request.getParameter("idCurso"));
         alunos = aDAO.gettodosAlunos(idCurso);
         mostraPainelFiltro = true;
+        returnPg = "&returnFilter=true&idCurso=" + idCurso;
     }
 %>
 <!DOCTYPE html>
@@ -23,7 +27,7 @@
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
         <script src="../js/modalExclusao.js"></script>
-        <% if(mostraPainelFiltro) { %>
+        <% if(mostraPainelFiltro && alunos.size() > 0) { %>
             <div class="container mt-4">
                 <div class="card" style="width: 90%; margin: 0 auto !important;">
                     <div class="card-header bg-dark">
@@ -60,7 +64,7 @@
                         <td><%=a.getCurso().getNomeCurso()%></td>
                         <td><%=a.getCurso().getTipoCurso()%></td>
                         <td>BT EDITAR</td>
-                        <td><a href="#" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
+                        <td><a href="../AlunoController?acao=delete&idAluno=<%=a.getIdAluno()%><%=returnPg%>" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
                     </tr>
                     <% }%>
                 </tbody>

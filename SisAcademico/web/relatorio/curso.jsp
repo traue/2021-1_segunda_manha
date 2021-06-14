@@ -14,6 +14,7 @@
     </head>
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
+        <script src="../js/modalExclusao.js"></script>
         <script>
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
@@ -48,7 +49,17 @@
                             </td>
                             <% } %>
                             <td>BT EDITAR</td>
-                            <td>BT EXCLUIR</td>
+                            <% if(c.getValue() != 0) { %>
+                            <td>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Sem alunos">
+                                    <button class="btn btn-secondary" disabled style="pointer-events: none;" type="button">Excluir</button>
+                                </span>
+                            </td>
+                            <% } else { %>
+                            <td>
+                                <a class="btn btn-danger" href="../CursoController?acao=delete&idCurso=<%=c.getKey().getIdCurso()%>" id="deleteCurso">Excluir</a></td>
+                            </td>
+                            <% } %>
                         </tr>
                         <% } %>
                     </tbody>
