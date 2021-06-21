@@ -7,11 +7,10 @@
     ArrayList<Aluno> alunos;
     String returnPg;
     boolean mostraPainelFiltro = false;
-    if(request.getParameter("idCurso") == null) {
-      alunos = aDAO.gettodosAlunos();
-      returnPg = "&returnFilter=false";
-    }
-    else {
+    if (request.getParameter("idCurso") == null) {
+        alunos = aDAO.gettodosAlunos();
+        returnPg = "&returnFilter=false";
+    } else {
         int idCurso = Integer.parseInt(request.getParameter("idCurso"));
         alunos = aDAO.gettodosAlunos(idCurso);
         mostraPainelFiltro = true;
@@ -26,24 +25,24 @@
     </head>
     <body>
         <jsp:include page="../menu.jsp"></jsp:include>
-        <script src="../js/modalExclusao.js"></script>
-        <% if(mostraPainelFiltro && alunos.size() > 0) { %>
-            <div class="container mt-4">
-                <div class="card" style="width: 90%; margin: 0 auto !important;">
-                    <div class="card-header bg-dark">
-                        <p class="text-white">Filtro aplicado</p>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="cart-title">
-                            Mostrando apenas alunos do curso:
-                            <strong>
-                                <%=alunos.get(0).getCurso().getNomeCurso()%>
-                            </strong>
-                        </h6>
-                        <a href="aluno.jsp" class="btn btn-primary">Limpar filtro</a>
-                    </div>
+            <script src="../js/modalExclusao.js"></script>
+        <% if (mostraPainelFiltro && alunos.size() > 0) {%>
+        <div class="container mt-4">
+            <div class="card" style="width: 90%; margin: 0 auto !important;">
+                <div class="card-header bg-dark">
+                    <p class="text-white">Filtro aplicado</p>
+                </div>
+                <div class="card-body">
+                    <h6 class="cart-title">
+                        Mostrando apenas alunos do curso:
+                        <strong>
+                            <%=alunos.get(0).getCurso().getNomeCurso()%>
+                        </strong>
+                    </h6>
+                    <a href="aluno.jsp" class="btn btn-primary">Limpar filtro</a>
                 </div>
             </div>
+        </div>
         <% } %>
         <div class="container mt-4">
             <div class="table-responsive-md" style="width: 90%; margin: 0 auto !important;">
@@ -57,19 +56,20 @@
                     <th scope="col" class="text-center">Excluir</th>
                     </thead>
                     <tbody>
-                    <% for (Aluno a : alunos) {%>
-                    <tr>
-                        <td><%=a.getRa()%></td>
-                        <td><%=a.getNomeAluno()%></td>
-                        <td><%=a.getCurso().getNomeCurso()%></td>
-                        <td><%=a.getCurso().getTipoCurso()%></td>
-                        <td class="text-center"><a href="../cadastro/aluno.jsp?idAluno=<%=a.getIdAluno()%>" class="btn btn-primary">Editar</a></td>
-                        <td class="text-center"><a href="../AlunoController?acao=delete&idAluno=<%=a.getIdAluno()%><%=returnPg%>" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
-                    </tr>
-                    <% }%>
-                </tbody>
-            </table>
+                        <% for (Aluno a : alunos) {%>
+                        <tr>
+                            <td><%=a.getRa()%></td>
+                            <td><%=a.getNomeAluno()%></td>
+                            <td><%=a.getCurso().getNomeCurso()%></td>
+                            <td><%=a.getCurso().getTipoCurso()%></td>
+                            <td class="text-center"><a href="../cadastro/aluno.jsp?idAluno=<%=a.getIdAluno()%>" class="btn btn-primary">Editar</a></td>
+                            <td class="text-center"><a href="../AlunoController?acao=delete&idAluno=<%=a.getIdAluno()%><%=returnPg%>" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
+                        </tr>
+                        <% }%>
+                    </tbody>
+                </table>
+                <a href="../cadastro/aluno.jsp" class="btn btn-info">Novo aluno</a>
+            </div>
         </div>
-    </div>
     </body>
 </html>
