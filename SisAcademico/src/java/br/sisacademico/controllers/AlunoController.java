@@ -1,6 +1,8 @@
 package br.sisacademico.controllers;
 
 import br.sisacademico.dao.AlunoDAO;
+import br.sisacademico.model.Aluno;
+import br.sisacademico.model.Curso;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +19,7 @@ public class AlunoController extends HttpServlet {
 
             String acao = request.getParameter("acao");
 
-            if (acao.equals("delete")) {
+            if (acao.equalsIgnoreCase("delete")) {
                 AlunoDAO aDAO = new AlunoDAO();
                 int idAluno = Integer.parseInt(request.getParameter("idAluno"));
                 if (aDAO.deleteAluno(idAluno)) {
@@ -27,7 +29,27 @@ public class AlunoController extends HttpServlet {
                     } else {
                         response.sendRedirect("./relatorio/aluno.jsp");
                     }
-                    
+
+                }
+            } else if (acao.equalsIgnoreCase("cadastro")) {
+                AlunoDAO aDAO = new AlunoDAO();
+                Aluno aluno = new Aluno(
+                        0,
+                        Integer.parseInt(request.getParameter("raAluno")),
+                        request.getParameter("nomeAluno"),
+                        new Curso(Integer.parseInt(request.getParameter("idcurso")), null, null));
+                if(aDAO.insereAluno(aluno)) {
+                    response.sendRedirect("./relatorio/aluno.jsp");
+                }
+            } else if(acao.equalsIgnoreCase("edicao")) {
+                AlunoDAO aDAO = new AlunoDAO();
+                Aluno aluno = new Aluno(
+                        Integer.parseInt(request.getParameter("idAluno")),
+                        Integer.parseInt(request.getParameter("raAluno")),
+                        request.getParameter("nomeAluno"),
+                        new Curso(Integer.parseInt(request.getParameter("idcurso")), null, null));
+                if(aDAO.editaAluno(aluno)) {
+                    response.sendRedirect("./relatorio/aluno.jsp");
                 }
             }
 

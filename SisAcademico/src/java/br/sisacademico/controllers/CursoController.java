@@ -31,6 +31,14 @@ public class CursoController extends HttpServlet {
                 int idCurso = Integer.parseInt(request.getParameter("idCurso"));
                 cDAO.deleteCurso(idCurso);
                 response.sendRedirect("./relatorio/curso.jsp");
+            } else if(acao.equalsIgnoreCase("edicao")) {
+                CursoDAO cDAO = new CursoDAO();
+                Curso c = new Curso();
+                c.setIdCurso(Integer.parseInt(request.getParameter("idCurso")));
+                c.setNomeCurso(request.getParameter("nomeCurso"));
+                c.setTipoCurso(request.getParameter("tipoCurso"));
+                if(cDAO.alteraCurso(c))
+                    response.sendRedirect("./relatorio/curso.jsp");
             }
             
             

@@ -53,8 +53,8 @@
                     <th scope="col">Nome do aluno</th>
                     <th scope="col">Curso</th>
                     <th scope="col">Tipo de Curso</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Excluir</th>
+                    <th scope="col" class="text-center">Editar</th>
+                    <th scope="col" class="text-center">Excluir</th>
                     </thead>
                     <tbody>
                     <% for (Aluno a : alunos) {%>
@@ -63,8 +63,8 @@
                         <td><%=a.getNomeAluno()%></td>
                         <td><%=a.getCurso().getNomeCurso()%></td>
                         <td><%=a.getCurso().getTipoCurso()%></td>
-                        <td>BT EDITAR</td>
-                        <td><a href="../AlunoController?acao=delete&idAluno=<%=a.getIdAluno()%><%=returnPg%>" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
+                        <td class="text-center"><a href="../cadastro/aluno.jsp?idAluno=<%=a.getIdAluno()%>" class="btn btn-primary">Editar</a></td>
+                        <td class="text-center"><a href="../AlunoController?acao=delete&idAluno=<%=a.getIdAluno()%><%=returnPg%>" id="deleteAluno" class="btn btn-danger">Excluir</a></td>
                     </tr>
                     <% }%>
                 </tbody>

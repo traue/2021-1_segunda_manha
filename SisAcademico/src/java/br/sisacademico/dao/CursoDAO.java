@@ -103,4 +103,19 @@ public class CursoDAO {
             return false;
         }
     }
+    
+    public boolean alteraCurso(Curso curso) throws SQLException {
+       try {
+            String query = "UPDATE \"tb_curso\" SET \"nome_curso\" = ?, \"tipo_curso\" = ? WHERE \"idCurso\" = ?";
+            PreparedStatement stm = ConnectionFactory.getConnection().prepareStatement(query);
+            stm.setString(1, curso.getNomeCurso());
+            stm.setString(2, curso.getTipoCurso());
+            stm.setInt(3, curso.getIdCurso());
+            stm.execute();
+            stm.getConnection().close();
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
 }

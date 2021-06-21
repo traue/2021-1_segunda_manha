@@ -25,38 +25,38 @@
                     <table class="table justify-content-center">
                         <thead class="thead-dark">
                         <th scope="col">Curso</th>
-                        <th scope="col">Tipo de Curso</th>
-                        <th scope="col">Qtd. de Alunos</th>
-                        <th scope="col">Ver alunos</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Excluir</th>
+                        <th scope="col" class="text-center">Tipo de Curso</th>
+                        <th scope="col" class="text-center">Qtd. de Alunos</th>
+                        <th scope="col" class="text-center">Ver alunos</th>
+                        <th scope="col" class="text-center">Editar</th>
+                        <th scope="col" class="text-center">Excluir</th>
                         </thead>
                         <tbody>
                         <% for (Map.Entry<Curso, Integer> c : cursos.entrySet()) { %>
                         <tr>
                             <td><%=c.getKey().getNomeCurso()%></td>
-                            <td><%=c.getKey().getTipoCurso()%></td>
-                            <td><%=c.getValue()%></td>
+                            <td class="text-center"><%=c.getKey().getTipoCurso()%></td>
+                            <td class="text-center"><%=c.getValue()%></td>
                             <% if(c.getValue() == 0) { %>
-                            <td>
+                            <td class="text-center">
                                 <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Sem alunos">
                                     <button class="btn btn-secondary" disabled style="pointer-events: none;" type="button">Alunos Matriculados</button>
                                 </span>
                             </td>
                             <% } else { %>
-                            <td>
-                                <a class="btn btn-success" href="./aluno.jsp?idCurso=<%=c.getKey().getIdCurso()%>">Alunos Matriculados</a>
+                            <td class="text-center">
+                                <a class="btn btn-info" href="./aluno.jsp?idCurso=<%=c.getKey().getIdCurso()%>">Alunos Matriculados</a>
                             </td>
                             <% } %>
-                            <td>BT EDITAR</td>
+                            <td class="text-center"><a class="btn btn-success" href="../cadastro/curso.jsp?idCurso=<%=c.getKey().getIdCurso()%>">Editar</a></td>
                             <% if(c.getValue() != 0) { %>
-                            <td>
-                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Sem alunos">
+                            <td class="text-center">
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Não é possível excluir um curso com alunos">
                                     <button class="btn btn-secondary" disabled style="pointer-events: none;" type="button">Excluir</button>
                                 </span>
                             </td>
                             <% } else { %>
-                            <td>
+                            <td class="text-center">
                                 <a class="btn btn-danger" href="../CursoController?acao=delete&idCurso=<%=c.getKey().getIdCurso()%>" id="deleteCurso">Excluir</a></td>
                             </td>
                             <% } %>
