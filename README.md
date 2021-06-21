@@ -1,7 +1,6 @@
 # 2021-1 - Segunda - Manhã - Turma 17
 ## Prof. Thiago G. Traue
 
-***
 
 ### Link das atividades
 
